@@ -84,3 +84,6 @@ vibe-kanban-cloud/
 
 .jj
 .sisyphus/
+
+# Vite temp files
+*.timestamp-*.mjs
