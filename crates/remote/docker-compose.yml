@@ -2,7 +2,7 @@
 # and REMOTE_SERVER_PORTS=0.0.0.0:3000:8081 so the server is reachable from other hosts.
 services:
   remote-db:
-    image: postgres:16-alpine
+    image: postgres:18-alpine
     command: [ "postgres", "-c", "wal_level=logical" ]
     environment:
       POSTGRES_DB: remote

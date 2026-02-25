@@ -144,16 +144,15 @@ pub fn generate_user_id() -> String {
     {
         // Use PowerShell to get machine GUID from registry
         if let Ok(output) = std::process::Command::new("powershell")
-            .args(&[
+            .args([
                 "-NoProfile",
                 "-Command",
                 "(Get-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Cryptography').MachineGuid",
             ])
             .output()
+            && output.status.success()
         {
-            if output.status.success() {
-                output.stdout.hash(&mut hasher);
-            }
+            output.stdout.hash(&mut hasher);
         }
     }
 
