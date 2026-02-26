@@ -7,11 +7,9 @@ lerna-debug.log*
 
 # Build artifacts
 target/
-dist/
 build/
 *.tgz
 *.tar.gz
-remote-frontend/dist/
 
 # IDE and editor files
 .vscode/
@@ -60,3 +58,6 @@ coverage/
 # Temporary folders
 tmp/
 temp/
+node_modules/
+target/
+**/*.rs.bk

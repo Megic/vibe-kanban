@@ -10,11 +10,11 @@ path = "src/bin/generate_types.rs"
 
 [features]
 default = []
-vk-billing = ["dep:billing"]
+# vk-billing = ["dep:billing"]
 
 [dependencies]
 # private crate for billing functionality
-billing = { git = "ssh://git@github.com/BloopAI/vibe-kanban-private", branch = "main", package = "billing", optional = true }
+# billing = { git = "ssh://git@github.com/BloopAI/vibe-kanban-private", branch = "main", package = "billing", optional = true }
 
 anyhow = "1.0"
 axum = { version = "0.8.4", features = ["macros", "multipart", "ws"] }
@@ -37,7 +37,7 @@ tracing = "0.1.43"
 tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt", "json"] }
 tracing-error = "0.2"
 thiserror = "2.0.12"
-ts-rs = { git = "https://github.com/xazukx/ts-rs.git", branch = "use-ts-enum", features = ["uuid-impl", "chrono-impl", "no-serde-warnings", "serde-json-impl"] }
+ts-rs = { git = "https://gitee.com/jiajunshan/ts-rs.git", branch = "use-ts-enum", features = ["uuid-impl", "chrono-impl", "no-serde-warnings", "serde-json-impl"] }
 api-types = { path = "../api-types" }
 utils = { path = "../utils" }
 uuid = { version = "1", features = ["serde", "v4"] }
